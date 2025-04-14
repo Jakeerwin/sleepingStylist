@@ -40,7 +40,7 @@ make sleepingStylistMon
 ---
 
 ## Time Spent
-- Part 1: 4 hours
+- Part 1: 45 hours
 - Part 2: 7 hours
 
 ## Difficulty (0–5 scale)
