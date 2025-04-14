@@ -1,6 +1,17 @@
-# README for Sleeping Stylist Assignment
+# Sleeping Stylist Assignment - Semaphore & Monitor Versions
 
-## Part 1: Semaphore Version (`sleepingStylistSem.c`)
+## Name
+Jake Erwin (worked solo)
+
+---
+
+## Part 1: Semaphore Version
+
+### Instructions
+**Make sure you are in the following directory before running any commands:**
+```
+cd Erwin_Jake_Assignment2/part1
+```
 
 ### How to Compile:
 ```bash
@@ -19,7 +30,13 @@ make sleepingStylistSem
 
 ---
 
-## Part 2: Monitor Version (`sleepingStylistMon.c` + `monitor.c`)
+## Part 2: Monitor Version
+
+### Instructions
+**Make sure you are in the following directory before running any commands:**
+```
+cd Erwin_Jake_Assignment2/part2
+```
 
 ### How to Compile:
 ```bash
@@ -36,13 +53,3 @@ make sleepingStylistMon
 - Haircut count increasing
 - Salon full and salon empty counters incrementing
 - Signal-and-continue behavior (signaler continues, not the signaled)
-
----
-
-## Time Spent
-- Part 1: 45 hours
-- Part 2: 7 hours
-
-## Difficulty (0–5 scale)
-- Part 1: N
-- Part 2: M
