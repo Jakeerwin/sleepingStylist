@@ -40,8 +40,8 @@ make sleepingStylistMon
 ---
 
 ## Time Spent
-- Part 1: X hours
-- Part 2: Y hours
+- Part 1: 4 hours
+- Part 2: 7 hours
 
 ## Difficulty (0–5 scale)
 - Part 1: N
