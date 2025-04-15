@@ -12,7 +12,7 @@ cd Erwin_Jake_Assignment2/part2
 
 ## How to Compile:
 ```bash
-make sleepingStylistMon
+make
 ```
 
 ## How to Run:
