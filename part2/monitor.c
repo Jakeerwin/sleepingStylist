@@ -73,12 +73,14 @@ int mon_checkStylist() {
 void mon_checkCustomer() {
     sem_wait(&monitorMutex);
 
-    stylist++;
-    signalCV(&stylistAvailable);
-
     if (customers == 0) {
         salonEmpty++;
+        stylist++;
+        signalCV(&stylistAvailable);
         waitCV(&customerAvailable);
+    } else {
+        stylist++;
+        signalCV(&stylistAvailable);
     }
 
     customers--;
@@ -87,19 +89,20 @@ void mon_checkCustomer() {
     sem_post(&monitorMutex);
 }
 
+
 void mon_debugPrint() {
     sem_wait(&monitorMutex);
-
-    printf("| ");
+    printf("\n\n\n\n\n\n\n\n\n\n\n| ");
     int occupied = 0;
     for (int i = 0; i < CHAIRS; i++) {
         printf("%d | ", waitingChairs[i]);
         if (waitingChairs[i]) occupied++;
     }
+    
     printf("=> %d\n", occupied);
     printf("Given haircuts = %d\n", haircuts);
     printf("Salon full = %d times\n", salonFull);
-    printf("Salon empty = %d times\n\n", salonEmpty);
+    printf("Salon empty = %d times\n\n\n\n\n\n", salonEmpty);
 
     sem_post(&monitorMutex);
 }

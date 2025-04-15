@@ -20,15 +20,20 @@ make
 ./sleepingStylistSem
 ```
 
+## Cleaning Up
+```bash
+make clean
+```
+
 ## What to Observe:
-- Customers entering, sitting, and leaving if full
-- Stylist cutting hair when customers are present
-- No starvation (all 75 customers get haircuts)
+- Customers entering and taking seats if available: "Customer takes a seat. Waiting: X"
+- Customers leaving and retrying if salon is full: "Customer leaves to shop"
+- Stylist goes to sleep when no customers: "Stylist is sleeping (no customers)"
+- Stylist cuts hair and customers receive service: "Customer getting haircut."
+- All 75 customers eventually get a haircut (no starvation)
 
 ## Time Spent
-- Part 1: 45 hours
-- Part 2: 7 hours
+- Part 1: 3 hours
 
 ## Difficulty (0–5 scale)
-- Part 1: N
-- Part 2: M
+- Part 1: 3

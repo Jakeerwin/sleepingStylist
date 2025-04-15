@@ -20,16 +20,19 @@ make
 ./sleepingStylistMon
 ```
 
+## Cleaning Up:
+```bash
+make clean
+```
+
 ## What to Observe:
 - Chairs visualized via debug print: `| 1 | 1 | 0 | 0 | ...`
 - Haircut count increasing
 - Salon full and salon empty counters incrementing
-- Signal-and-continue behavior (signaler continues, not the signaled)
+- Signal-and-continue behavior is followed: the signaling thread continues inside the monitor, while the signaled thread waits at the entry queue. You can observe this via lack of overlapping debug output or additional `printf` logs in `waitCV`/`signalCV` if enabled.
 
 ## Time Spent
-- Part 1: 45 hours
 - Part 2: 7 hours
 
 ## Difficulty (0–5 scale)
-- Part 1: N
-- Part 2: M
+- Part 2: 5

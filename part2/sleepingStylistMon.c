@@ -24,10 +24,8 @@ void* customerThread(void* arg) {
     while (1) {
         mon_debugPrint();
         if (mon_checkStylist()) {
-            printf("Customer getting haircut.\n");
             break;
         } else {
-            printf("Customer goes shopping.\n");
             usleep(DELAY); // Simulate shopping
         }
     }
@@ -44,12 +42,17 @@ int main() {
 
     for (int i = 0; i < CUSTOMERS; i++) {
         pthread_create(&customerTids[i], NULL, customerThread, NULL);
-        usleep(10000); // Stagger arrival
+        int random_delay = 250000 + rand() % (1000000 - 250000 + 1);
+        usleep(random_delay);
     }
 
     for (int i = 0; i < CUSTOMERS; i++) {
         pthread_join(customerTids[i], NULL);
     }
+
+    usleep(DELAY);
+    mon_debugPrint();
+
 
     pthread_cancel(stylistTid);
     pthread_join(stylistTid, NULL);
