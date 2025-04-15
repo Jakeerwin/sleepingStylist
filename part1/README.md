@@ -33,7 +33,7 @@ make clean
 - All 75 customers eventually get a haircut (no starvation)
 
 ## Time Spent
-- Part 1: 3 hours
+- 3 hours
 
 ## Difficulty (0–5 scale)
-- Part 1: 3
+- 3
